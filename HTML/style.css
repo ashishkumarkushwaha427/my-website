@@ -1,0 +1,29 @@
+/* Custom styles for a modern look */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling ke liye */
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1200x800/6366f1/ffffff?text=Stay+Safe');
+    background-size: cover;
+    background-position: center;
+}
+
+.sos-button {
+    box-shadow: 0 0 20px rgba(221, 22, 22, 0.7);
+}
+
+/* Style for the map container */
+#map, #sosMap {
+    height: 400px;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+#sosMap {
+    height: 250px; /* Smaller height for the modal map */
+    margin-top: 0;
+    margin-bottom: 1rem;
+}

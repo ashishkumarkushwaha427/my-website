@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha Sakhi - Women Safety & Empowerment</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- External CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl text-indigo-600">
+                <i class="fas fa-shield-heart"></i> Suraksha Sakhi
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600">Home</a>
+                <a href="#features" class="text-gray-600 hover:text-indigo-600">Features</a>
+                <a href="#resources" class="text-gray-600 hover:text-indigo-600">Resources</a>
+                <a href="#report" class="text-gray-600 hover:text-indigo-600">Report</a>
+                <a href="#" class="bg-indigo-600 text-white py-2 px-4 rounded-full hover:bg-indigo-700">Login</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section text-white text-center py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Your Safety, Our Priority.</h1>
+            <p class="text-lg md:text-xl mb-8">Instant alerts, safe zones, and resources at your fingertips.</p>
+            <a href="#sos" class="bg-red-600 text-white font-bold py-4 px-8 rounded-full text-xl hover:bg-red-700 transition duration-300 sos-button">
+                <i class="fas fa-bell"></i> PANIC ALERT
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+
+        <!-- SOS Section -->
+        <section id="sos" class="text-center mb-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Emergency SOS</h2>
+            <p class="text-gray-600 mb-8">Press the button below to immediately notify your trusted contacts with your location.</p>
+            <button id="sosBtn" class="bg-red-600 text-white rounded-full w-48 h-48 flex items-center justify-center text-3xl font-bold shadow-2xl hover:bg-red-700 transition-transform transform hover:scale-105 sos-button mx-auto">
+                SOS
+            </button>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Key Features</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Safe Zone Locator -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-map-marked-alt text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Safe Zone Locator</h3>
+                    <p class="text-gray-600">Find nearby police stations, hospitals, and NGOs on a live map.</p>
+                    <button id="findSafeZonesBtn" class="mt-4 bg-indigo-600 text-white py-2 px-4 rounded-full hover:bg-indigo-700">Find Safe Zones Near Me</button>
+                    <div id="map" class="hidden"></div>
+                </div>
+                <!-- Journey Tracker -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-route text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Journey Tracker</h3>
+                    <p class="text-gray-600">Share your live location with family while traveling alone.</p>
+                    <div class="mt-4 space-x-2">
+                        <button id="startJourneyBtn" class="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600">Start Journey</button>
+                        <button id="stopJourneyBtn" class="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600" disabled>Stop Journey</button>
+                    </div>
+                    <div id="journeyStatus" class="mt-4 text-sm text-gray-600"></div>
+                </div>
+                <!-- Anonymous Reporting -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <i class="fas fa-user-secret text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Anonymous Reporting</h3>
+                    <p class="text-gray-600">Report incidents safely and securely without revealing your identity.</p>
+                    <a href="#report" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded-full hover:bg-indigo-700">File a Report</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="mb-20 bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Empowerment Resources</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="#" class="block p-6 bg-indigo-50 rounded-lg hover:bg-indigo-100 text-center">
+                    <i class="fas fa-gavel text-3xl text-indigo-600 mb-3"></i>
+                    <h4 class="font-semibold">Legal Rights</h4>
+                </a>
+                <a href="#" class="block p-6 bg-indigo-50 rounded-lg hover:bg-indigo-100 text-center">
+                    <i class="fas fa-fist-raised text-3xl text-indigo-600 mb-3"></i>
+                    <h4 class="font-semibold">Self-Defense</h4>
+                </a>
+                <a href="#" class="block p-6 bg-indigo-50 rounded-lg hover:bg-indigo-100 text-center">
+                    <i class="fas fa-phone-alt text-3xl text-indigo-600 mb-3"></i>
+                    <h4 class="font-semibold">Helpline Numbers</h4>
+                </a>
+                <a href="#" class="block p-6 bg-indigo-50 rounded-lg hover:bg-indigo-100 text-center">
+                    <i class="fas fa-hands-helping text-3xl text-indigo-600 mb-3"></i>
+                    <h4 class="font-semibold">Support NGOs</h4>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Anonymous Reporting Form -->
+        <section id="report" class="bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Report an Incident Anonymously</h2>
+            <form id="reportForm" class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="incident-type" class="block text-gray-700 font-semibold mb-2">Type of Incident</label>
+                    <select id="incident-type" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option>Harassment</option>
+                        <option>Stalking</option>
+                        <option>Theft</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="location" class="block text-gray-700 font-semibold mb-2">Location of Incident</label>
+                    <input type="text" id="location" placeholder="e.g., Near New Market, Bhopal" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mb-6">
+                    <label for="description" class="block text-gray-700 font-semibold mb-2">Describe the Incident</label>
+                    <textarea id="description" rows="4" placeholder="Please provide as much detail as possible..." class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition duration-300">
+                        Submit Report Securely
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Suraksha Sakhi. A project for Women Safety and Empowerment.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Message Box (Modal) for alerts -->
+    <div id="messageBox" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+            <h3 id="messageTitle" class="text-xl font-bold mb-4 text-indigo-600">SOS Alert</h3>
+            <!-- Container for message content (text or map) -->
+            <div id="messageContent">
+                <div id="sosMap" class="hidden"></div>
+                <p id="messageText" class="text-gray-700 mb-6 whitespace-pre-wrap"></p>
+            </div>
+            <button id="closeBtn" class="bg-indigo-600 text-white py-2 px-6 rounded-full hover:bg-indigo-700">Close</button>
+        </div>
+    </div>
+
+    <!-- Google Maps API Script -->
+    <!-- ZAROORI: Niche di gayi placeholder key ko apni asli Google Maps API key se badlein. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSy...YAHAN_APNI_ASLI_KEY_DAALEIN&callback=initMap" async defer></script>
+    
+    <!-- External JavaScript File Link -->
+    <script src="script.js"></script>
+</body>
+</html>
